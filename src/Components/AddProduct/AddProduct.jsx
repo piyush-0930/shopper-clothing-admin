@@ -28,7 +28,7 @@ const AddProduct = () => {
         let formData = new FormData();
         formData.append('product',image);
 
-        await fetch('https://shopper-backend.onrender.com/upload',{
+        await fetch('https://shopper-clothing-backend.onrender.com/upload',{
             method:'POST',
             headers:{
                 Accept:'application/json',
@@ -40,7 +40,7 @@ const AddProduct = () => {
         {
             product.image = responseData.image_url;
             console.log(product);
-            await fetch('https://shopper-backend.onrender.com/addproduct',{
+            await fetch('https://shopper-clothing-backend.onrender.com/addproduct',{
                 method:'POST',
                 headers:{
                     Accept:'application/json',
